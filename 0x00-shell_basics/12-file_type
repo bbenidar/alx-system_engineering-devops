@@ -1,0 +1,3 @@
+#!/bin/bash
+filetype=$(file /tmp/iamafile)
+echo $filetype
