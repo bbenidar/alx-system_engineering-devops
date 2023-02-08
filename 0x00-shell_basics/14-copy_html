@@ -1,8 +1,2 @@
 #!/bin/bash
-for file in *.html; do
-  # Check if the file exists in the parent of the working directory
-  if [ ! -e ../"$file" ] || [ "$file" -nt ../"$file" ]; then
-    # If the file does not exist or is newer, copy it to the parent of the working directory
-    cp "$file" ../"$file"
-  fi
-done
+rsync -avu --ignore-existing *.html ../
