@@ -1,2 +1,2 @@
 #!/bin/bash
-greb ^ [[:alpha;]] /etc/passwd
+greb -i '^[a-z]' /etc/ssh/sshd_config
